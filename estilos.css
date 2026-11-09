@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+:root {
+    --primary-color: #8b1e3f;
+    --primary-hover: #6d1731;
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 4px solid var(--primary-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#caratula-section, #formulario-section {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    border-top: 6px solid var(--primary-color);
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.integrantes-box {
+    background-color: #fdf6f7;
+    border: 1px solid #f2d9de;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.integrantes-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.integrantes-box li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.tarea-card {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(139, 30, 63, 0.3);
+}
+
+.tarea-card span {
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.btn-ver, .btn-regresar {
+    background-color: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-regresar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+input[type="file"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-enviar {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

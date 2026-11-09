@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículum Vitae | Wilde Callata Quispe</title>
+  <style>
+    :root { --azul:#183b5b; --azul2:#24577d; --borde:#cbd5df; --fondo:#eef3f7; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; padding:30px 14px; background:var(--fondo);
+      color:#202b35; font-family:Arial, Helvetica, sans-serif;
+    }
+    .hoja {
+      max-width:900px; margin:auto; background:#fff; padding:34px 42px;
+      border:1px solid #b9c4ce; box-shadow:0 8px 28px rgba(20,45,65,.12);
+    }
+    .encabezado {
+      display:grid; grid-template-columns:1fr 125px; align-items:center;
+      border:1px solid var(--borde); min-height:135px; margin-bottom:30px;
+    }
+    .encabezado h1 {
+      text-align:center; color:var(--azul); font-family:Georgia,serif;
+      font-size:30px; letter-spacing:1px; margin:20px 10px;
+    }
+    .foto {
+      border-left:1px solid var(--borde); height:100%; min-height:135px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:10px; gap:7px; color:#5b6874; font-size:12px; text-align:center;
+    }
+    .foto-preview {
+      width:82px; height:92px; border:1px dashed #9aa8b5; object-fit:cover;
+      display:block; background:#f5f7f9;
+    }
+    .seccion { margin:26px 0; }
+    .seccion h2 {
+      color:var(--azul); font-family:Georgia,serif; font-size:21px;
+      border-bottom:2px solid #aebbc6; padding-bottom:9px; margin:0 0 15px;
+    }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:13px 22px; }
+    .campo { display:flex; flex-direction:column; gap:5px; }
+    label { font-size:13px; font-weight:700; color:#34495a; }
+    input, textarea, select {
+      width:100%; padding:10px 11px; border:1px solid #c7d1da; border-radius:4px;
+      font:14px Arial,sans-serif; color:#263746; background:#fff;
+    }
+    input:focus, textarea:focus { outline:2px solid #b7d5eb; border-color:var(--azul2); }
+    textarea { min-height:85px; resize:vertical; }
+    .ancho { grid-column:1/-1; }
+    .nota { font-size:13px; line-height:1.6; color:#53616d; }
+    .acciones { display:flex; gap:12px; justify-content:center; margin:28px 0 8px; flex-wrap:wrap; }
+    button {
+      border:0; border-radius:5px; padding:12px 22px; cursor:pointer;
+      font-size:14px; font-weight:700;
+    }
+    .enviar { background:var(--azul); color:white; }
+    .limpiar { background:#e7edf2; color:#263746; }
+    button:hover { filter:brightness(.94); }
+    #mensaje { display:none; margin-top:16px; padding:12px; border-radius:5px;
+      background:#eaf5ed; color:#205b31; text-align:center; font-size:14px; }
+    footer { border-top:1px solid var(--borde); padding-top:15px; margin-top:25px;
+      text-align:center; color:#687784; font-size:12px; }
+    @media(max-width:620px) {
+      .hoja { padding:22px 17px; }
+      .grid { grid-template-columns:1fr; }
+      .ancho { grid-column:auto; }
+      .encabezado { grid-template-columns:1fr 100px; }
+      .encabezado h1 { font-size:22px; }
+    }
+    @media print {
+      body {
+	background: #fff;
+	padding: 0;
+	background-color: #0CF;
+}
+      .hoja { box-shadow:none; border:0; max-width:none; }
+      .acciones, #mensaje, .foto input { display:none !important; }
+      input, textarea { border:0; border-bottom:1px solid #ddd; padding-left:0; }
+    }
+  .foto1 {      border-left:1px solid var(--borde); height:100%; min-height:135px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:10px; gap:7px; color:#5b6874; font-size:12px; text-align:center;
+}
+.foto-preview1 {      width:82px; height:92px; border:1px dashed #9aa8b5; object-fit:cover;
+      display:block; background:#f5f7f9;
+}
+  .foto-preview11 {width:82px; height:92px; border:1px dashed #9aa8b5; object-fit:cover;
+      display:block; background:#f5f7f9;
+}
+.foto11 {border-left:1px solid var(--borde); height:100%; min-height:135px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:10px; gap:7px; color:#5b6874; font-size:12px; text-align:center;
+}
+  .foto-preview111 {width:82px; height:92px; border:1px dashed #9aa8b5; object-fit:cover;
+      display:block; background:#f5f7f9;
+}
+.foto111 {border-left:1px solid var(--borde); height:100%; min-height:135px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:10px; gap:7px; color:#5b6874; font-size:12px; text-align:center;
+}
+  .foto2 {      border-left:1px solid var(--borde); height:100%; min-height:135px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:10px; gap:7px; color:#5b6874; font-size:12px; text-align:center;
+}
+.foto-preview1111 {width:82px; height:92px; border:1px dashed #9aa8b5; object-fit:cover;
+      display:block; background:#f5f7f9;
+}
+.foto1111 {border-left:1px solid var(--borde); height:100%; min-height:135px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:10px; gap:7px; color:#5b6874; font-size:12px; text-align:center;
+}
+  </style>
+</head>
+<body bgcolor="#99CC99">
+  <main class="hoja">
+    <form id="formularioCV">
+      <header class="encabezado">
+        <h1>CURRÍCULUM VITAE</h1>
+        <div class="foto">
+          <label for="foto">FOTOGRAFÍA</label>
+          <span class="foto2"><span class="foto1111"><img id="vistaFoto" class="foto-preview1111" alt="Vista previa de fotografía"></span></span>
+          <input id="foto" type="file" accept="image/*" aria-label="Seleccionar fotografía">
+        </div>
+      </header>
+
+      <section class="seccion">
+        <h2>DATOS PERSONALES</h2>
+        <div class="grid">
+          <div class="campo">
+            <label for="apellidos">Apellidos</label>
+            <input id="apellidos" name="apellidos" placeholder="APELLIDOS"></textarea>
+          </div>
+          <div class="campo">
+            <label for="nombres">Nombre(s)</label>
+            <input id="nombres" name="nombres" placeholder="NOMBRES"></textarea>
+          </div>
+          <div class="campo">
+            <label for="dni">DNI</label>
+<input
+    type="text"
+    id="dni"
+    name="dni"
+    placeholder="Ingrese su DNI"
+    maxlength="8"
+    minlength="8"
+    inputmode="numeric"
+    pattern="[0-9]{8}"
+    oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,8)"
+    title="Ingrese exactamente 8 números"
+    required
+>
+            </div>
+          <div class="campo">
+           <label for="nacimiento">Fecha de nacimiento</label>
+<input
+    type="text"
+    id="nacimiento"
+    name="nacimiento"
+    placeholder="DD/MM/AAAA"
+    maxlength="10"
+    inputmode="numeric"
+    pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+    oninput="
+    let v = this.value.replace(/[^0-9]/g, '').slice(0,8);
+    if (v.length > 4) {
+        v = v.slice(0,2) + '/' + v.slice(2,4) + '/' + v.slice(4);
+    } else if (v.length > 2) {
+        v = v.slice(0,2) + '/' + v.slice(2);
+    }
+    this.value = v;
+    "
+    title="Ingrese la fecha en formato DD/MM/AAAA"
+    required
+>
+          </div>
+          <div class="campo">
+            <label for="lugar">Lugar de nacimiento</label>
+            <input id="lugar" name="lugar" placeholder="LUGAR"></textarea>
+          </div>
+          <div class="campo">
+            <label for="provincia">Provincia</label>
+            <input id="provincia" name="provincia" placeholder="INGRESE LA PROVINCIA"></textarea>
+          </div>
+          <div class="campo ancho">
+            <label for="direccion">Dirección</label>
+            <input id="direccion" name="direccion" placeholder="DIRECCION"></textarea>
+          </div>
+          <div class="campo">
+            <label for="localidad">Localidad / distrito</label>
+            <input id="localidad" name="localidad" placeholder="LOCALIDAD"></textarea>
+          </div>
+          <div class="campo">
+            <label for="telefono">CELULAR</label>
+            <input 
+  type="tel" 
+  id="telefono" 
+  name="telefono" 
+  placeholder="Ingrese 9 dígitos" 
+  maxlength="9" 
+  pattern="[0-9]{9}" 
+  oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 9);"
+>
+          </div>
+          <div class="campo">
+            <label for="movil">Correo electrónico</label>
+            <input id="movil" name="movil" placeholder="correo electrónico"></textarea> 
+          </div>
+          <div class="campo"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h2>FORMACIÓN Y ESTUDIOS</h2>
+        <div class="grid">
+          <div class="campo ancho">
+            <label for="titulacion">Titulación / estudios</label>
+            <input id="titulacion" name="titulacion" placeholder="INGRESE SU PROFESION"></textarea>
+          </div>
+          <div class="campo">
+            <label for="idiomas">Idiomas</label>
+            <input id="idiomas" name="idiomas" placeholder="SU IDIOMA"></textarea>
+          </div>
+          <div class="campo">
+            <label for="informatica">Conocimientos informáticos</label>
+            <input id="informatica" name="informatica" placeholder="CONOCIMIENTOS INFORMATICOS"></textarea>
+                      </div>
+          <div class="campo ancho">
+            <label for="cursos">Cursos y seminarios</label>
+            <textarea id="cursos" name="cursos" placeholder="Agregue cursos, certificados o seminarios (opcional)"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h2>EXPERIENCIA PROFESIONAL</h2>
+        <div class="grid">
+          <div class="campo">
+            <label for="empresa">Empresa / institución</label>
+            <input id="empresa" name="empresa" placeholder="INSTITUCION"></textarea>
+          </div>
+          <div class="campo">
+            <label for="fecha">Periodo / fecha</label>
+            <input id="fecha" name="fecha" placeholder="INDIQUE EL PERIODO DE SU TRABAJO" >
+          </div>
+          <div class="campo ancho">
+            <label for="puesto">Puesto / actividad desarrollada</label>
+            <input id="puesto" name="puesto" placeholder="PUESTO DE TRABAJO"></textarea>
+          </div>
+          <div class="campo ancho">
+            <label for="funciones">Funciones realizadas</label>
+            <textarea id="funciones" name="funciones" placeholder="Describa brevemente sus funciones (opcional)"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h2>DATOS COMPLEMENTARIOS</h2>
+        <div class="campo">
+          <label for="complementarios">Información adicional</label>
+          <textarea id="complementarios" name="complementarios" placeholder="Agregue información que considere importante"></textarea>
+        </div>
+      </section>
+
+      <p class="nota">Declaro que la información consignada en este currículum vitae es verdadera y podrá ser acreditada en caso de ser solicitada.</p>
+      <div class="grid">
+        <div class="campo">
+          <label for="firmaLugar">Lugar y fecha</label>
+          <input id="firmaLugar" name="firmaLugar" placeholder="INGRESE EL LUGAR Y LA FECHA"></textarea>
+        </div>
+        <div class="campo">
+          <label for="firma">Nombre completo</label>
+          <input id="firma" name="firma" placeholder="INGRESE SU NOMBRE COMPLETO"></textarea>
+        </div>
+      </div>
+
+      <div class="acciones">
+        <button class="enviar" type="submit">Enviar formulario</button>
+        <button class="limpiar" type="reset">Limpiar formulario</button>
+        <button class="limpiar" type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+      </div>
+      <div id="mensaje" role="status" aria-live="polite">
+        Formulario revisado correctamente. Esta página de GitHub Pages es estática: para recibir los datos en un correo o servidor se debe conectar un servicio de formularios.
+      </div>
+    </form>
+    <footer>Formulario HTML5 · Currículum Vitae · Wilde Callata Quispe</footer>
+  </main>
+
+  <script>
+    const formulario = document.getElementById('formularioCV');
+    const mensaje = document.getElementById('mensaje');
+    const foto = document.getElementById('foto');
+    const vistaFoto = document.getElementById('vistaFoto');
+
+    foto.addEventListener('change', function () {
+      const archivo = this.files[0];
+      if (archivo) vistaFoto.src = URL.createObjectURL(archivo);
+    });
+
+    formulario.addEventListener('submit', function (evento) {
+      evento.preventDefault();
+      if (!formulario.reportValidity()) return;
+      mensaje.style.display = 'block';
+      mensaje.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    formulario.addEventListener('reset', function () {
+      mensaje.style.display = 'none';
+      vistaFoto.removeAttribute('src');
+    });
+  </script>
+</body>
+</html>
